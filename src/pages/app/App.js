@@ -1,17 +1,22 @@
 import React from "react";
-import { Router, Route, Switch } from "react-router-dom";
+import { Router } from "react-router-dom";
+import { Layout } from "antd";
 
+import Header from "../../components/Header";
+import Content from "./Content";
 import history from "../../history";
 import { AuthProvider } from "../../context/AuthContext";
-import Content from "./Content";
+
+import "./App.css";
 
 const App = () => {
   return (
     <Router history={history}>
       <AuthProvider>
-        <Switch>
-          <Route component={Content} path="/" />=
-        </Switch>
+        <Layout>
+          <Header />
+          <Content />
+        </Layout>
       </AuthProvider>
     </Router>
   );

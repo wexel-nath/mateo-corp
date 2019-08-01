@@ -1,0 +1,9 @@
+.header-menu {
+  line-height: 64px !important;
+  margin-left: 80px !important;
+}
+
+.header-logo {
+  height: 64px;
+  float: left;
+}
